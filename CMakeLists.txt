@@ -31,6 +31,11 @@ DEFINE_OS()
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(${LIBRARY_NAME}
+  src/data_collection/out_string_stream.cpp
+  src/data_collection/data_stream.cpp
+  #src/data_collection/data_collector.cpp
+  #src/data_collection/data_reader.cpp
+
   src/realtime_check.cpp
   src/realtime_thread_creation.cpp
 
@@ -88,6 +93,7 @@ set(TEST_CONFIG_PATH ${PROJECT_SOURCE_DIR}/tests/config/)
 catkin_add_gtest(test_real_time_tools
   tests/main.cpp
   tests/test_real_time_tools.cpp
+  tests/test_data_collection.cpp
 )
 # link the dependecies to it
 if (TARGET test_real_time_tools)
