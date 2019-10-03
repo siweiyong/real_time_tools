@@ -23,10 +23,6 @@ catkin_package(
   CATKIN_DEPENDS mpi_cmake_modules
 )
 
-# This macro sets the C++ preprocessor flags "XENOMAI", "RT_PREEMPT", or
-# "UBUNTU" according to the current operating system.
-DEFINE_OS()
-
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(${LIBRARY_NAME}
