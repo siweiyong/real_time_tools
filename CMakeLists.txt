@@ -7,8 +7,8 @@ if(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 endif()
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-# Use C++11
-set(CMAKE_CXX_STANDARD 11)
+# Use C++14
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
 
 find_package(catkin REQUIRED COMPONENTS
